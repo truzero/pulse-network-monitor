@@ -41,3 +41,8 @@ temp/
 
 # Local junk (never commit nested git dirs)
 .git.old.*/
+
+# Local-only editor/tooling artifacts (do not publish)
+_vendor/
+cursorignore.template
+.cursorignore

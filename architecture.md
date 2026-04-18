@@ -46,7 +46,7 @@ The operator is trusted; the app must not broaden attack surface beyond local de
 
 ## Roadmap
 
-- **R0 — Bootstrap**: Repo, docs, Cursor rules, feature skeleton.
+- **R0 — Bootstrap**: Repo, docs, governance baseline, feature skeleton.
 - **R1 — Tauri skeleton**: `src-tauri`, minimal window, typed IPC stubs.
 - **R2 — Port registry MVP**: Enumerate listeners and map port to process.
 - **R3 — Process runtime MVP**: List processes and safe signals with confirmations.

@@ -57,20 +57,9 @@ Rust and Tauri scaffolding lands in `src-tauri/` as the implementation hardens.
 
 ## Development
 
-Canonical working copy for this effort lives at:
+Clone the repository and follow [`architecture.md`](./architecture.md) for layout and roadmap. **Build and run** instructions will be added once the Tauri workspace is scaffolded under `src-tauri/`.
 
-`~/Documents/GitHub Projects/Pulse App`
-
-Bootstrap and build steps will be finalized after the Tauri workspace is generated. Until then, treat this repository as the **canonical product and security contract** for Pulse: see [`_vendor/cursor/rules/security.mdc`](./_vendor/cursor/rules/security.mdc).
-
-**Cursor rules path on macOS:** some macOS configurations block creating a folder literally named `.cursor` inside `~/Documents` (privacy controls). Rules are vendored under `_vendor/cursor/rules/`. After cloning, materialize the standard layout from a regular terminal:
-
-```bash
-mkdir -p .cursor/rules
-cp _vendor/cursor/rules/*.mdc .cursor/rules/
-```
-
-**Cursor indexing:** this repo ships [`cursorignore.template`](./cursorignore.template). Copy it to `.cursorignore` at the repository root (`cp cursorignore.template .cursorignore`) where your environment allows that filename.
+Contributions should match the architectural manifesto there (feature slices under `src/features/`, strict typing with Zod at boundaries, and the 200-line file budget).
 
 ## License
 

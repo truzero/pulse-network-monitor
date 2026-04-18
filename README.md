@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./docs/assets/truzero-logo.svg" alt="Official TRUZERO wordmark" width="720"/>
+<img src="./docs/assets/truzero-logo.svg" alt="Official TRUZERO wordmark" width="380"/>
 
 # truzero // pulse
 

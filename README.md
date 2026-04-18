@@ -57,9 +57,17 @@ Rust and Tauri scaffolding lands in `src-tauri/` as the implementation hardens.
 
 ## Development
 
-Clone the repository and follow [`architecture.md`](./architecture.md) for layout and roadmap. **Build and run** instructions will be added once the Tauri workspace is scaffolded under `src-tauri/`.
+**Requirements:** Rust (stable), Node 20+. macOS recommended for Finder integration and vibrancy (`com.truzero.pulse`).
 
-Contributions should match the architectural manifesto there (feature slices under `src/features/`, strict typing with Zod at boundaries, and the 200-line file budget).
+```bash
+npm install
+npm run tauri dev        # desktop shell + Vite HMR
+npm run tauri build      # release bundle
+```
+
+Rust backend and IPC live in [`src-tauri/`](./src-tauri/). React UI lives under [`src/`](./src/) with feature slices (`process-runtime`, `ui-shell`). Snapshots validate with **Zod** before render.
+
+Contributions should follow [`architecture.md`](./architecture.md): feature-first layout, strict typing, and the **200-line** file budget per module.
 
 ## License
 

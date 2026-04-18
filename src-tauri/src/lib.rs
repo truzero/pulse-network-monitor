@@ -1,15 +1,17 @@
 //! Pulse — truzero system intelligence (Tauri shell).
 
+mod actions;
+mod dto;
+mod ports;
+mod snapshot;
+
+use dto::PulseSystem;
+use sysinfo::System;
 use std::sync::Mutex;
 
-use sysinfo::System;
-
-mod pulse_commands;
-
-use pulse_commands::{
-    get_pulse_snapshot, get_process_map, inspect_process, kill_recursive, reveal_in_finder,
-    PulseSystem,
-};
+use actions::{inspect_process, kill_recursive, reveal_in_finder};
+use ports::get_process_map;
+use snapshot::get_pulse_snapshot;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="280" viewBox="0 0 960 280" role="img" aria-label="TRUZERO official logo">
+  <defs>
+    <linearGradient id="metalFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="22%" stop-color="#eef2f7"/>
+      <stop offset="42%" stop-color="#9aa4b2"/>
+      <stop offset="52%" stop-color="#d7dce3"/>
+      <stop offset="68%" stop-color="#7d8794"/>
+      <stop offset="100%" stop-color="#c5ccd6"/>
+    </linearGradient>
+    <linearGradient id="sparkle" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="45%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+    <filter id="chromeDepth" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.2" result="blur"/>
+      <feOffset dx="0" dy="5" in="blur" result="offsetBlur"/>
+      <feMerge>
+        <feMergeNode in="offsetBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="rimLight" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="960" height="280" fill="#000000"/>
+  <text
+    x="480"
+    y="168"
+    text-anchor="middle"
+    font-family="Impact, 'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-size="112"
+    font-weight="700"
+    letter-spacing="0.09em"
+    fill="url(#metalFace)"
+    stroke="#0b1220"
+    stroke-width="1.4"
+    filter="url(#chromeDepth)">
+    TRUZERO
+  </text>
+  <g transform="translate(832 218)" filter="url(#rimLight)">
+    <path d="M0 -16 L3.6 -4 L16 0 L3.6 4 L0 16 L-3.6 4 L-16 0 L-3.6 -4 Z" fill="url(#sparkle)" stroke="#e5e7eb" stroke-width="0.45"/>
+  </g>
+</svg>

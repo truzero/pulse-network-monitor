@@ -16,6 +16,17 @@ Repository slug: <code>pulse-network-monitor</code></p>
 
 [Architecture](./architecture.md) · [Roadmap](./architecture.md#roadmap)
 
+### Screenshots
+
+<p align="center">
+  <strong>Process list</strong><br/>
+  <img src="./docs/assets/screenshots/process-list.png" alt="Pulse process list with CPU, memory, and command paths" width="920"/><br/><br/>
+  <strong>Port map</strong><br/>
+  <img src="./docs/assets/screenshots/port-map.png" alt="Pulse port map with listeners, protocols, and release actions" width="920"/><br/><br/>
+  <strong>Settings</strong><br/>
+  <img src="./docs/assets/screenshots/settings.png" alt="Pulse settings panel with themes, polling, and system health" width="920"/>
+</p>
+
 </div>
 
 ---

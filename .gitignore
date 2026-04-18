@@ -42,7 +42,7 @@ temp/
 # Local junk (never commit nested git dirs)
 .git.old.*/
 
-# Local-only editor/tooling artifacts (do not publish)
+# Private developer-local overlays (keep out of forks and CI sandboxes)
 _vendor/
 cursorignore.template
 .cursorignore

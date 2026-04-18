@@ -3,6 +3,7 @@ import { z } from "zod";
 export const PortBindingSchema = z.object({
   port: z.number(),
   pid: z.number(),
+  protocol: z.string(),
 });
 
 export const ProcessRowSchema = z.object({
@@ -13,6 +14,8 @@ export const ProcessRowSchema = z.object({
   memory: z.number(),
   cmd: z.array(z.string()),
   exe: z.string().nullable().optional(),
+  uid: z.number().nullable().optional(),
+  user: z.string().nullable().optional(),
   status: z.string(),
   warning: z.boolean(),
 });
@@ -38,3 +41,13 @@ export const InspectorSchema = z.object({
 });
 
 export type InspectorData = z.infer<typeof InspectorSchema>;
+
+export const SocketRowSchema = z.object({
+  protocol: z.string(),
+  localAddress: z.string(),
+  remoteAddress: z.string().nullable().optional(),
+  state: z.string().nullable().optional(),
+});
+
+export type SocketRow = z.infer<typeof SocketRowSchema>;
+

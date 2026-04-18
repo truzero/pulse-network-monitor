@@ -1,50 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="280" viewBox="0 0 960 280" role="img" aria-label="TRUZERO official logo">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="260" viewBox="0 0 920 260" role="img" aria-label="TRUZERO">
   <defs>
-    <linearGradient id="metalFace" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="facetChrome" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="22%" stop-color="#eef2f7"/>
-      <stop offset="42%" stop-color="#9aa4b2"/>
-      <stop offset="52%" stop-color="#d7dce3"/>
-      <stop offset="68%" stop-color="#7d8794"/>
-      <stop offset="100%" stop-color="#c5ccd6"/>
+      <stop offset="6%" stop-color="#9aa3b1"/>
+      <stop offset="11%" stop-color="#f3f5f8"/>
+      <stop offset="16%" stop-color="#6b7380"/>
+      <stop offset="22%" stop-color="#dce1e8"/>
+      <stop offset="28%" stop-color="#4a5160"/>
+      <stop offset="34%" stop-color="#eef1f6"/>
+      <stop offset="40%" stop-color="#7a8494"/>
+      <stop offset="46%" stop-color="#c8ced8"/>
+      <stop offset="52%" stop-color="#505869"/>
+      <stop offset="58%" stop-color="#e4e8ef"/>
+      <stop offset="64%" stop-color="#636b7a"/>
+      <stop offset="72%" stop-color="#f8fafc"/>
+      <stop offset="80%" stop-color="#8b95a4"/>
+      <stop offset="88%" stop-color="#d4dae3"/>
+      <stop offset="100%" stop-color="#7d8796"/>
     </linearGradient>
-    <linearGradient id="sparkle" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#f8fafc"/>
-      <stop offset="45%" stop-color="#cbd5e1"/>
-      <stop offset="100%" stop-color="#64748b"/>
+    <linearGradient id="topRim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.92"/>
+      <stop offset="38%" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
-    <filter id="chromeDepth" x="-15%" y="-15%" width="130%" height="130%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="2.2" result="blur"/>
-      <feOffset dx="0" dy="5" in="blur" result="offsetBlur"/>
+    <filter id="coolBloom" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="19" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="0 0 0 0 0.72
+                0 0 0 0 0.96
+                0 0 0 0 1
+                0 0 0 0.5 0" result="g"/>
       <feMerge>
-        <feMergeNode in="offsetBlur"/>
+        <feMergeNode in="g"/>
+      </feMerge>
+    </filter>
+    <filter id="crushedSurface" x="-12%" y="-12%" width="124%" height="124%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.032 0.068" numOctaves="5" seed="42" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="letterDrop" x="-18%" y="-18%" width="136%" height="136%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="blur"/>
+      <feOffset dx="0" dy="5" in="blur" result="off"/>
+      <feFlood flood-color="#000000" flood-opacity="0.52"/>
+      <feComposite in2="off" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <filter id="rimLight" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="8" result="glow"/>
-      <feMerge>
-        <feMergeNode in="glow"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
+    <clipPath id="topBand">
+      <rect x="96" y="54" width="728" height="54"/>
+    </clipPath>
   </defs>
-  <rect width="960" height="280" fill="#000000"/>
-  <text
-    x="480"
-    y="168"
-    text-anchor="middle"
-    font-family="Impact, 'Arial Black', 'Helvetica Neue', Arial, sans-serif"
-    font-size="112"
-    font-weight="700"
-    letter-spacing="0.09em"
-    fill="url(#metalFace)"
-    stroke="#0b1220"
-    stroke-width="1.4"
-    filter="url(#chromeDepth)">
-    TRUZERO
-  </text>
-  <g transform="translate(832 218)" filter="url(#rimLight)">
-    <path d="M0 -16 L3.6 -4 L16 0 L3.6 4 L0 16 L-3.6 4 L-16 0 L-3.6 -4 Z" fill="url(#sparkle)" stroke="#e5e7eb" stroke-width="0.45"/>
+  <rect width="920" height="260" fill="#000000"/>
+  <g transform="translate(460 158)" text-anchor="middle">
+    <!-- Cool-white / cyan bloom (no sharp glyph on this layer) -->
+    <text font-family="Impact, Haettenschweiler, 'Arial Narrow Bold', 'Helvetica Neue', Arial, sans-serif"
+          font-size="104" font-weight="700" letter-spacing="0.065em" fill="#ecfeff"
+          filter="url(#coolBloom)">
+      TRUZERO
+    </text>
+    <!-- Baseline shadow -->
+    <text y="5" font-family="Impact, Haettenschweiler, 'Arial Narrow Bold', 'Helvetica Neue', Arial, sans-serif"
+          font-size="104" font-weight="700" letter-spacing="0.065em" fill="#050608" opacity="0.78">
+      TRUZERO
+    </text>
+    <!-- Primary crushed-chrome -->
+    <text font-family="Impact, Haettenschweiler, 'Arial Narrow Bold', 'Helvetica Neue', Arial, sans-serif"
+          font-size="104" font-weight="700" letter-spacing="0.065em"
+          fill="url(#facetChrome)" stroke="#12161e" stroke-width="0.9"
+          filter="url(#letterDrop)" style="paint-order: stroke fill">
+      TRUZERO
+    </text>
+    <text font-family="Impact, Haettenschweiler, 'Arial Narrow Bold', 'Helvetica Neue', Arial, sans-serif"
+          font-size="104" font-weight="700" letter-spacing="0.065em"
+          fill="url(#facetChrome)" stroke="#323948" stroke-width="0.35"
+          filter="url(#crushedSurface)" style="paint-order: stroke fill">
+      TRUZERO
+    </text>
+    <!-- Specular rim -->
+    <text font-family="Impact, Haettenschweiler, 'Arial Narrow Bold', 'Helvetica Neue', Arial, sans-serif"
+          font-size="104" font-weight="700" letter-spacing="0.065em" fill="url(#topRim)" clip-path="url(#topBand)">
+      TRUZERO
+    </text>
   </g>
 </svg>

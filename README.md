@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./docs/assets/truzero-logo.svg" alt="Official TRUZERO logo — metallic chrome wordmark on black, sparkle mark lower-right" width="720"/>
+<img src="./docs/assets/truzero-logo.svg" alt="TRUZERO — crushed chrome wordmark on black with cyan bloom" width="720"/>
 
 # truzero // pulse
 

@@ -4,12 +4,12 @@
 
 # truzero // pulse
 
-<p align="center"><strong>pulse network monitor</strong><br/>
-Repository slug: <code>pulse-network-monitor</code></p>
+<p align="center"><strong>process & listener intelligence for macOS</strong><br/>
+Repository: <code>truzero/pulse</code></p>
 
 **A high-performance, developer-centric process & port manager** built with **Rust** and **Tauri**.
 
-[![pulse-network-monitor](https://img.shields.io/badge/GitHub-pulse--network--monitor-111?style=flat-square&logo=github)](https://github.com/truzero/pulse-network-monitor)
+[![GitHub: truzero/pulse](https://img.shields.io/badge/GitHub-truzero%2Fpulse-111?style=flat-square&logo=github)](https://github.com/truzero/pulse)
 [![License: MIT](https://img.shields.io/badge/License-MIT-22d3ee?style=flat-square)](./LICENSE)
 [![Rust](https://img.shields.io/badge/Rust-stable-orange?style=flat-square&logo=rust)](https://www.rust-lang.org/)
 [![Tauri](https://img.shields.io/badge/Tauri-desktop-24c8db?style=flat-square&logo=tauri)](https://tauri.app/)
